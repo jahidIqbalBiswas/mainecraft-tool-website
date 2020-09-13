@@ -1,0 +1,835 @@
+/*
+	Template 	: Minecraft Tools
+	Author 		: https://bsoft.netlify.app
+	Version 	: 1.0
+*/
+
+
+/*
+--------------------
+Table of Content
+--------------------
+1. common
+2. navbar
+3. slide-nav
+4. slider
+5. download-area
+6. service-video
+7. portfolio-demo
+8. pricing
+9. achievement
+10.testimonial
+11.contact
+12.form
+13.footer
+*/
+
+
+/*fonts-start*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600&family=Oswald:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;500&display=swap');
+
+/*fonts-end*/
+
+
+/*--- dark mode----*/
+
+.dark {
+    background: black;
+    color: #fff;
+}
+
+.dark .port-button button {
+    border: 1px solid #fff;
+}
+
+.dark .about-text h4 {
+    color: #ded2d2 !important;
+}
+
+.dark form button {
+    border: 1px solid #fff !important;
+}
+
+.dark header ul {
+    background: black !important;
+}
+
+.dark header ul a {
+    color: #fff !important;
+}
+
+.dark header ul a i {
+    color: #fff !important;
+}
+
+.dark .card .card-image img {
+    background: black;
+}
+
+.dark .switch label .lever {
+    background: #fff;
+}
+
+.dark .teal.darken-2 {
+    background-color: #151515 !important;
+}
+
+.dark nav {
+    background: #222!important;
+}
+
+.dark .is-sticky nav {
+    background: #012d58 !important;
+}
+
+.fa-moon-o {
+    font-size: 25px !important;
+    margin-right: 10px !important;
+}
+
+.dark-active {
+    background: rgb(90, 90, 90);
+}
+
+.dark .slider-area .bx-wrapper {
+    background: #000;
+}
+
+.dark .card .card-reveal {
+    background: #111;
+}
+
+.dark .card .card-title {
+    color: #696969 !important;
+}
+
+.dark .ratings h5 {
+    color: #111;
+}
+
+
+/*--- dark mode end----*/
+
+
+/*for slidenav scrollbar remove---start*/
+
+.sidenav::-webkit-scrollbar {
+    display: none;
+}
+
+.sidenav {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    z-index: 9999999999;
+}
+
+
+/*for body scrollbar remove*/
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.dark .card.blue-grey.darken-1 .card-title {
+    color: #fff !important;
+}
+
+
+/*for body and slidenav scrollbar remove---end*/
+
+
+/*===================
+1.common
+===================*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100% !important;
+    height: auto;
+}
+
+nav {
+    padding-top: 6px;
+    background: #4caf50;
+    transition: 1s;
+}
+
+.is-sticky nav {
+    background: dodgerblue;
+}
+
+
+/*===================
+2.navbar
+===================*/
+
+.toggleContainer {
+    padding: 2px 15px;
+    cursor: pointer;
+}
+
+.all-bars {
+    padding-top: 7.5px !important;
+}
+
+.bar-1,
+.bar-2,
+.bar-3 {
+    width: 26px;
+    height: 3px;
+    background: #ffffff;
+    margin: 6px;
+    transition: .4s;
+    border-radius: 2px;
+}
+
+
+/*===================
+3.slide-navbar
+===================*/
+
+.background img {
+    max-width: 100%;
+    min-height: 100%;
+}
+
+.user {
+    border: 5px solid white;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.background {
+    filter: blur(3px);
+    transition: .5s;
+}
+
+.user-view:hover .background {
+    filter: blur(0px);
+}
+
+.name {
+    font-size: 28px !important;
+    margin-top: 0px !important;
+    margin-bottom: 5px !important;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.email-title span {
+    font-family: 'Inconsolata', monospace;
+    font-size: 16px !important;
+}
+
+.email-title span:hover {
+    color: rgba(252, 253, 253, 0.733) !important;
+}
+
+.brand-logo {
+    margin-right: 50px;
+}
+
+.brand-logo img {
+    width: 50px;
+}
+
+.brand-logo.center {
+    font-family: 'Oswald', sans-serif;
+}
+
+.inline-social {
+    display: inline-block;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.social-link {
+    margin-left: 30px;
+}
+
+.inline-social .fab {
+    font-size: 25px;
+    padding: 10px;
+    margin-right: 10px;
+    padding-left: 0px;
+    color: #444;
+    text-align: center;
+    display: block;
+    transition: .3s;
+}
+
+.inline-social .fab:hover {
+    transform: scale(1.8);
+}
+
+.inline-social .fa-facebook:hover {
+    color: #4267b2 !important;
+}
+
+.inline-social .fa-twitter:hover {
+    color: dodgerblue !important;
+}
+
+.inline-social .fa-instagram:hover {
+    color: rgb(255, 115, 0) !important;
+}
+
+.inline-social .fa-telegram:hover {
+    color: dodgerblue !important;
+}
+
+.inline-social .fa-whatsapp:hover {
+    color: rgb(4, 184, 4) !important;
+}
+
+.waves-effect {
+    text-transform: uppercase;
+}
+
+.name .white-text {
+    text-shadow: 3px 4px 2px #111 !important;
+}
+
+#sticker {
+    position: sticky;
+}
+
+
+/*===================
+4.slider-area
+===================*/
+
+.bx-wrapper {
+    border: 0px solid #fff;
+    -webkit-box-shadow: 0 0 0px #ccc;
+    box-shadow: 0 0 0px #ccc;
+    /* border: 5px solid #fff; */
+    /* background: #fff; */
+}
+
+.slider div {
+    cursor: hand !important;
+}
+
+.slider div img {
+    width: 100%;
+    max-height: 95vh;
+}
+
+.overlay {
+    position: relative;
+}
+
+.overlay:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: rgba(17, 17, 17, 0.863);
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    text-align: center;
+}
+
+.text h1 {
+    color: rgba(255, 255, 255, 0.774);
+    font-size: 7rem;
+    margin-top: 30px !important;
+    margin: -6.2rem 0 1.68rem 0;
+    font-weight: 700;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    letter-spacing: 1px;
+}
+
+.text h1 span {
+    font-family: 'Oswald', sans-serif !important;
+    color: rgb(16, 216, 93);
+    font-size: 5rem;
+}
+
+.text h1 span strong {
+    color: rgb(235, 98, 8);
+}
+
+.text p {
+    color: rgb(255, 255, 255);
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 2px !important;
+    font-size: 20px;
+}
+
+.text .blue {
+    margin-top: 50px;
+    cursor: text;
+}
+
+
+/*===================
+5.download-area
+===================*/
+
+.card-title {
+    font-family: 'Oswald', sans-serif !important;
+    letter-spacing: 2px;
+}
+
+.fa-download {
+    font-size: 15px !important;
+    margin-right: 3px;
+}
+
+.title h3 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    position: relative;
+}
+
+.title h3::after {
+    content: "";
+    display: block;
+    width: 110px;
+    height: 2px;
+    background: #666;
+    position: absolute;
+    left: 50%;
+    top: 125%;
+    transform: translate(-50%, -50%);
+}
+
+.title p {
+    width: 500px;
+    margin: auto;
+    margin-top: 30px;
+    color: #888;
+}
+
+.title {
+    text-align: center;
+    padding: 70px 0px !important;
+}
+
+
+/*===================
+6.service-video
+===================*/
+
+.service-video {
+    background: linear-gradient(#00000070, #00000070), linear-gradient(#00000070, #00000070), url(../img/bg3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 50px 0px;
+    margin: 80px auto;
+}
+
+.video-wrapper {
+    text-align: center;
+    color: #fff;
+}
+
+.video-wrapper h4 span {
+    color: orange;
+    font-family: 'Oswald', sans-serif;
+}
+
+.video-wrapper p {
+    font-family: 'Lobster', cursive;
+    width: 500px;
+    margin: 20px auto;
+    letter-spacing: 2px;
+}
+
+.video-wrapper i {
+    font-size: 70px;
+    color: cyan;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.ratings h5 {
+    display: block;
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    cursor: no-drop;
+}
+
+.ratings h5 span {
+    display: block;
+    font-size: 13px;
+    text-align: center;
+    cursor: no-drop;
+}
+
+.ratings {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.ratings i {
+    color: orangered;
+}
+
+
+/*============
+7.portfolio
+============*/
+
+.port-button {
+    text-align: center;
+    margin: 30px 0px 60px 0px;
+}
+
+.port-button button {
+    margin: 5px 0px;
+}
+
+.port-button button:hover {
+    background: #444!important;
+}
+
+.port-button button:focus {
+    background: orangered !important
+}
+
+
+/* item-1*/
+
+.port-item-1 {
+    position: relative;
+    margin: 10px;
+}
+
+.port-item-1 img {
+    width: 100%;
+    height: 100%;
+}
+
+.port-item-1:hover:after {
+    transform: scaleY(1);
+}
+
+.port-item-1:hover .port-text {
+    bottom: 30px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.port-item-1:after {
+    position: absolute;
+    left: 4px;
+    bottom: 5px;
+    display: block;
+    width: 97%;
+    height: 97%;
+    content: "";
+    background: rgba(0, 0, 0, 0.609);
+    border-radius: 15px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: .5s;
+}
+
+
+/* others item */
+
+.port-item {
+    position: relative;
+    margin: 10px;
+}
+
+.port-item img {
+    min-width: 100% !important;
+    min-height: 100% !important;
+}
+
+.port-item:hover:after {
+    transform: scaleY(1);
+}
+
+.port-item:hover .port-text {
+    bottom: 30px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.port-item:after {
+    position: absolute;
+    left: 0px;
+    bottom: 5px;
+    display: block;
+    width: 100%;
+    height: 98%;
+    content: "";
+    background: rgba(0, 0, 0, 0.733);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: .5s;
+}
+
+.port-item-1 {
+    position: relative;
+}
+
+.port-text {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+}
+
+.port-text h4 {
+    font-family: 'Oswald', sans-serif;
+    color: orange;
+}
+
+.port-text p {
+    font-family: 'Lobster', cursive;
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+
+/*============
+8.about
+=============*/
+
+.about-img {
+    margin-top: 40px;
+    box-shadow: -20px -20px 0px 0px #222;
+}
+
+.about-text {
+    margin-left: 30px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    color: #555;
+}
+
+.about-text button {
+    margin-top: 10px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+}
+
+.about-text button:focus {
+    background: darkgreen;
+}
+
+.about-text h4 {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #111;
+}
+
+
+/*===================
+9. achievement
+===================*/
+
+.achievement {
+    background: linear-gradient(#00000080, #00000080), linear-gradient(#00000080, #00000080), url(../img/bg3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    padding: 100px 0px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.ach-items i {
+    margin-bottom: 20px;
+    color: skyblue;
+}
+
+.ach-items h3 {
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: orange;
+}
+
+.ach-items h6 {
+    color: #ccc;
+    text-transform: uppercase;
+}
+
+
+/*===================
+10. testimonial
+===================*/
+
+.testimonial {
+    margin: 100px 0px;
+}
+
+.testi-item {
+    border: 1px solid #f1f1f1;
+    padding: 50px;
+    text-align: center;
+    width: 300px;
+    height: auto;
+    background: #fff;
+}
+
+.testi-item::before {
+    content: "\f10d";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    border: 1px solid #f1f1f1;
+    line-height: 50px;
+    color: #222;
+}
+
+.testi-item img {
+    height: 80px;
+    width: 80px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.testi-item p {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-size: 12px !important;
+    color: gray;
+    letter-spacing: 1px !important;
+}
+
+.testi-item div {
+    margin: 0 auto;
+    margin-bottom: 0px;
+}
+
+.testi-item h5 {
+    font-size: 25px !important;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+}
+
+.testi-item .company {
+    color: orangered;
+}
+
+
+/*==============
+11. contact
+===============*/
+
+.contact {
+    padding-bottom: 80px;
+}
+
+.contact-item {
+    border: 1px solid #f1f1f1;
+    padding: 15px 15px 15px 80px;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    margin: 15px 0px;
+    position: relative;
+}
+
+.contact-item i {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    width: 50px;
+    height: 50px;
+    background: #222;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+}
+
+.contact-item span {
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: gray;
+}
+
+.fa-paper-plane {
+    font-size: 14px !important;
+}
+
+.my-btn-sub {
+    margin: 20px 0px;
+}
+
+.f-menu {
+    font-family: 'Poppins', sans-serif;
+}
+
+.f-menu a {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.671);
+    display: block;
+    transition: .3s;
+    padding: 2px 5px;
+}
+
+.f-menu a:hover {
+    background: orangered;
+}
+
+.f-text {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+
+.copy-right {
+    letter-spacing: 1px;
+    font-family: arial;
+}
+
+.info {
+    display: block !important;
+    text-align: center;
+}
+
+.info span {
+    display: block !important;
+}
